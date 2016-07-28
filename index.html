@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-dark.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print">
+
+    <title>How to embed images directly to your HTML or Markdown by TigerND</title>
+  </head>
+
+  <body>
+
+    <header>
+      <div class="container">
+        <h1>How to embed images directly to your HTML or Markdown</h1>
+        <h2>steemit</h2>
+
+        <section id="downloads">
+          <a href="https://github.com/TigerND/steem-examples/zipball/master" class="btn">Download as .zip</a>
+          <a href="https://github.com/TigerND/steem-examples/tarball/master" class="btn">Download as .tar.gz</a>
+          <a href="https://github.com/TigerND/steem-examples" class="btn btn-github"><span class="icon"></span>View on GitHub</a>
+        </section>
+      </div>
+    </header>
+
+    <div class="container">
+      <section id="main_content">
+        <h3>
+<a id="how-to-embed-images-directly-to-your-html-or-markdown" class="anchor" href="#how-to-embed-images-directly-to-your-html-or-markdown" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>How to embed images directly to your HTML or Markdown</h3>
+
+<p><img src="https://i.imgsafe.org/82dac99.jpg" alt="Img"></p>
+
+<p>When you code a web page, you’ll oftentimes want to include images. In almost every case you’ll throw down a line of code that looks something like this:</p>
+
+<div class="highlight highlight-text-html-basic"><pre>&lt;<span class="pl-ent">img</span> <span class="pl-e">src</span>=<span class="pl-s"><span class="pl-pds">"</span>location/of/image.png<span class="pl-pds">"</span></span> <span class="pl-e">alt</span>=<span class="pl-s"><span class="pl-pds">"</span>alternative text<span class="pl-pds">"</span></span> <span class="pl-e">scale</span>=<span class="pl-s"><span class="pl-pds">"</span>0<span class="pl-pds">"</span></span>&gt;</pre></div>
+
+<p>But did you know that you can embed your image directly into the HTML without having to link to an external file? Yep, but first, why would you want to? In a word, portability. In certain cases, you may want to be able to pick up your page and simply relocate it without worrying about whether linked images are going to transfer correctly as well. How do we do this? Observe.</p>
+
+<p>Let’s say you have an image that you want to include in your markup — when you link to it, the browser interprets it as encoded data in a format dictated by your  tag. In theory, you can convert the image directly to encoded data and put it directly into the src parameter, right? Let’s find out.</p>
+
+<p><strong>You can use Base64 code instead of an image location.</strong></p>
+
+<div class="highlight highlight-text-html-basic"><pre>&lt;<span class="pl-ent">img</span> <span class="pl-e">src</span>=<span class="pl-s"><span class="pl-pds">"</span>data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAIAAAD8GO2jAAAACXBIWXMAAAsTAAALEwEAmpwYAAAA</span>
+<span class="pl-s">B3RJTUUH4AccEA4yOA1aawAAAyFJREFUSMftlltIFGEUx8/3zTd7cS/tels1TbeyqLSiorKUIExI</span>
+<span class="pl-s">KEMiIiiMopcgCLKH6KGg6AI9+aARVPRQVPZgUQ8pBElJZZRlpIVlZuiqm7q3mZ3Ld3roQtgyzYZS</span>
+<span class="pl-s">D/0H5mH4vvnNOXPO/3wEEWEqRWGK9Q8A8PvtVrfc2hcHAFVTJxPAOd90+CYAP/dMjyoAAJuP3JlM</span>
+<span class="pl-s">QF8g9LBzSNEwx0ludOkA2Nz+aSwqTRrAn+0pKfLVNrRWzWNvRuDDuL6hJH/PmXtmQ0ATetETSN3Y</span>
+<span class="pl-s">EBwPbbke3toY7vk04q6sj6uKmb2mqqjInyFQISLhvhXiYJTm5aQVz0xVVD5pEYyGpc73AUTsHFJO</span>
+<span class="pl-s">tEYQsfF+F5oTSaqTP0txr91CgJjfwhI+HQtHX/UGKZn4IvKtLSZqZrbHl+ZKAtDR/bH8UIuNAQUd</span>
+<span class="pl-s">AHQiGn9m3d7SnZULkwBYLRa7RfDPKchesY7xeNvl84JoNQAEQ7GorDpsotk+cNpFRBRFxjU1EugH</span>
+<span class="pl-s">yowjOHm1o3D7xR3HmswC0j0OACJJMgDIcY38zqz2VxfNzXHcbh88fumBKUBWupcSHpdVAKCE/9YO</span>
+<span class="pl-s">S4tzrx2tsjDacOulOasgxOO0KlIMEFMcTuNS5oipbjujhFIyPC6Z9SKfN0WOhAWuWJxuRG7cqjMy</span>
+<span class="pl-s">Xf3DIU3nSwozzQL8PieC0NfWQl1pDpvRT2aU7Dp9t7y2KRxTTu0pNQuoWu1XND40GIwF+t1ZuQYA</span>
+<span class="pl-s">Tdc73o2sWuB7XFddtih/YrIN8jt9c73KBZHB7KXLXj9qT7gmxUp7r+z+w3lw4WAFAKgadD95mnCB</span>
+<span class="pl-s">ovGa8sI/HzgVy2fVrM3TdOQ8cZTVK7OP7FpjDEicolAkuu1oU/PzgA6iwyYQ+Hr9fAwARJQUrmty</span>
+<span class="pl-s">2fyMswfWz83PSALwQ4Hhkb4hKTAaHo8qclzRqZWiYmNsmoNlpLpz0+25WZm/li38ZMOEc05IEv4O</span>
+<span class="pl-s">AFEV3wTBa0cCIGtgYzAQBr8XUgR8+2GAMYFzPhqSyhYXMIGRb3MnGYbGYUxGjQOjIAqg6GChIFAA</span>
+<span class="pl-s">IKocU3Vut4iKpntcNoFS8v9s+tcBXwDEIPHZH2+GUwAAAABJRU5ErkJggg<span class="pl-pds">"</span></span> <span class="pl-e">alt</span>=<span class="pl-s"><span class="pl-pds">"</span>beastie.png<span class="pl-pds">"</span></span> <span class="pl-e">scale</span>=<span class="pl-s"><span class="pl-pds">"</span>0<span class="pl-pds">"</span></span>&gt;</pre></div>
+
+<p><img alt="beastie.png"></p>
+
+<p><img alt="hello.svg"></p>
+
+<p>It's a pity that <a href="https://stemmin.com">steemit.com</a> can't handle it correctly :(</p>
+
+<p><strong>Would be nice to have it working properly</strong></p>
+
+<p><img src="https://s31.postimg.org/l3wzs912j/Screenshot_2016_07_28_19_39_25.png" alt="Pic"></p>
+      </section>
+    </div>
+
+    
+  </body>
+</html>
