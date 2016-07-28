@@ -1,5 +1,7 @@
 ### How to embed images directly to your HTML or Markdown
 
+![Img](https://i.imgsafe.org/82dac99.jpg)
+
 When you code a web page, you’ll oftentimes want to include images. In almost every case you’ll throw down a line of code that looks something like this:
 
 ```html
@@ -46,4 +48,15 @@ Tdc73o2sWuB7XFddtih/YrIN8jt9c73KBZHB7KXLXj9qT7gmxUp7r+z+w3lw4WAFAKgadD95mnCB
 ovGa8sI/HzgVy2fVrM3TdOQ8cZTVK7OP7FpjDEicolAkuu1oU/PzgA6iwyYQ+Hr9fAwARJQUrmty
 2fyMswfWz83PSALwQ4Hhkb4hKTAaHo8qclzRqZWiYmNsmoNlpLpz0+25WZm/li38ZMOEc05IEv4O
 AFEV3wTBa0cCIGtgYzAQBr8XUgR8+2GAMYFzPhqSyhYXMIGRb3MnGYbGYUxGjQOjIAqg6GChIFAA
-IKocU3Vut4iKpntcNoFS8v9s+tcBXwDEIPHZH2+GUwAAAABJRU5ErkJggg" alt="beastie.png" scale="0">
+IKocU3Vut4iKpntcNoFS8v9s+tcBXwDEIPHZH2+GUwAAAABJRU5ErkJggg" alt="beastie.png">
+
+<img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZlcnNpb249IjEuMSI+CiAg
+PHNjcmlwdCB0eXBlPSJhcHBsaWNhdGlvbi9lY21hc2NyaXB0Ij4gPCFbQ0RBVEFbCiAgICBhbGVy
+dCgnaGVsbG8gdGhlcmUnKQogIF1dPiA8L3NjcmlwdD4KICA8Y2lyY2xlIGN4PSI1MCIgY3k9IjUw
+IiByPSI0MCIgZmlsbD0icmVkIiBzdHJva2U9ImJsYWNrIi8+Cjwvc3ZnPg" alt="hello.svg">
+
+It's a pity that [steemit.com](https://stemmin.com) can't handle it correctly :(
+
+__Would be nice to have it working properly__
+
+![Pic](https://s31.postimg.org/l3wzs912j/Screenshot_2016_07_28_19_39_25.png)
